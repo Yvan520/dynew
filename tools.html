@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渡鸦2实用工具 - Boss计时器、搬砖收益计算器</title>
+  <meta name="description" content="渡鸦2新纪元在线工具：世界Boss刷新倒计时、搬砖收益计算器、装备评分工具。纯前端免费使用。">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; }
+    .tool-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .tool-card-header { padding: 20px 24px 0; }
+    .tool-card-header h2 { font-size: 1.15rem; margin-bottom: 4px; }
+    .tool-card-header p { font-size: 0.85rem; color: var(--text-secondary); }
+    .tool-card-body { padding: 20px 24px; }
+
+    .boss-list { display: flex; flex-direction: column; gap: 10px; }
+    .boss-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: var(--bg-primary); border-radius: var(--radius-sm); flex-wrap: wrap; gap: 8px; }
+    .boss-item .name { font-weight: 600; font-size: 0.9rem; }
+    .boss-item .time { font-size: 0.85rem; color: var(--text-secondary); }
+    .boss-item .countdown { font-size: 1rem; font-weight: 700; color: var(--accent-red); min-width: 70px; text-align: right; }
+    .boss-item .status-badge { font-size: 0.75rem; padding: 2px 8px; border-radius: 20px; }
+    .status-alive { background: rgba(39, 174, 96, 0.2); color: #27ae60; }
+    .status-dead { background: rgba(192, 57, 43, 0.2); color: var(--accent-red); }
+
+    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .calc-field { display: flex; flex-direction: column; gap: 4px; }
+    .calc-field label { font-size: 0.8rem; color: var(--text-secondary); font-weight: 600; }
+    .calc-field input, .calc-field select { padding: 8px 12px; background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 0.9rem; }
+    .calc-field input:focus, .calc-field select:focus { outline: none; border-color: var(--accent-red); }
+    .calc-result { margin-top: 16px; padding: 16px; background: var(--bg-primary); border-radius: var(--radius-sm); }
+    .calc-result .row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 0.9rem; }
+    .calc-result .row.total { border-top: 1px solid var(--border); margin-top: 6px; padding-top: 12px; font-weight: 700; font-size: 1.05rem; color: var(--accent-red); }
+
+    .tool-btn { padding: 10px 20px; border: none; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all var(--transition); }
+    .tool-btn-primary { background: var(--accent-red); color: #fff; }
+    .tool-btn-primary:hover { opacity: 0.9; }
+
+    .note { font-size: 0.8rem; color: var(--text-muted); margin-top: 12px; }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">&#x1F987; <span>渡鸦2</span> 攻略站</a>
+    <nav class="nav" id="nav">
+      <a href="index.html">首页</a> <a href="guides.html">攻略</a> <a href="classes.html">职业</a>
+      <a href="tools.html" class="active">工具</a> <a href="database.html">资料库</a>
+      <a href="news.html">资讯</a> <a href="about.html">关于</a>
+    </nav>
+    <div class="header-search"><span class="icon">&#x1F50D;</span><input type="text" id="headerSearch" placeholder="搜索攻略..." /></div>
+    <button class="hamburger" id="hamburger">&#x2630;</button>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">首页</a> / 实用工具</div>
+    <h1>&#x1F6E0;&#xFE0F; 渡鸦2实用工具</h1>
+    <p>Boss刷新计时器、搬砖收益计算器，免费在线使用</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="tool-grid">
+
+      <!-- Tool 1: Boss Timer -->
+      <div class="tool-card">
+        <div class="tool-card-header">
+          <h2>&#x1F47E; 世界Boss刷新计时器</h2>
+          <p>实时显示Boss倒计时，再也不用蹲点等了</p>
+        </div>
+        <div class="tool-card-body">
+          <div id="bossContainer" class="boss-list">
+            <div class="boss-item"><span class="name">加载中...</span></div>
+          </div>
+          <p class="note">&#x1F551; 基于游戏内固定刷新时间表计算，可能有 ±5 分钟误差</p>
+          <p class="note">&#x1F4A1; 数据保存在本地，刷新页面不会丢失</p>
+        </div>
+      </div>
+
+      <!-- Tool 2: Profit Calculator -->
+      <div class="tool-card">
+        <div class="tool-card-header">
+          <h2>&#x1F4B0; 搬砖收益计算器</h2>
+          <p>输入你的刷本数据，算算一天能赚多少</p>
+        </div>
+        <div class="tool-card-body">
+          <div class="calc-grid">
+            <div class="calc-field">
+              <label>职业</label>
+              <select id="jobSelect">
+                <option value="1.0">狂战士</option>
+                <option value="0.85">神圣法师</option>
+                <option value="0.9">夜巡者</option>
+                <option value="0.8">先锋</option>
+                <option value="0.95">元素使</option>
+                <option value="1.05">毁灭者</option>
+              </select>
+            </div>
+            <div class="calc-field">
+              <label>每日副本次数</label>
+              <input type="number" id="dungeonCount" value="3" min="0" max="10" />
+            </div>
+            <div class="calc-field">
+              <label>平均每次收益（金币）</label>
+              <input type="number" id="dungeonProfit" value="5000" min="0" />
+            </div>
+            <div class="calc-field">
+              <label>挂机时长（小时/天）</label>
+              <input type="number" id="farmHours" value="6" min="0" max="24" />
+            </div>
+          </div>
+          <div class="calc-result" id="calcResult">
+            <div class="row"><span>日收益</span><span id="dailyProfit">0</span></div>
+            <div class="row"><span>周收益</span><span id="weeklyProfit">0</span></div>
+            <div class="row"><span>月收益</span><span id="monthlyProfit">0</span></div>
+            <div class="row total"><span>预估月收入（人民币）</span><span id="monthlyCNY">0</span></div>
+          </div>
+          <button class="tool-btn tool-btn-primary" onclick="calcProfit()">&#x1F504; 重新计算</button>
+          <p class="note">&#x26A0; 按当前市价 1万金币 ≈ 2元 估算，实际价格随市场波动</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container footer-inner"><p>&copy; 2026 渡鸦2攻略站 &mdash; 玩家共建攻略社区 | <a href="privacy.html">隐私政策</a></p><p>游戏版权 &copy; Netmarble Corporation</p></div></footer>
+<button class="back-top" id="backTop">&#x2191;</button>
+<script>
+// ==================== BOSS TIMER ====================
+const BOSS_SCHEDULE = [
+  { id: 'boss1', name: '暗影领主', map: '深渊第1层', interval: 120, icon: '&#x1F47E;' },
+  { id: 'boss2', name: '火焰巨人', map: '深渊第2层', interval: 150, icon: '&#x1F525;' },
+  { id: 'boss3', name: '冰霜女王', map: '深渊第3层', interval: 180, icon: '&#x2744;&#xFE0F;' },
+  { id: 'boss4', name: '堕落天使', map: '深渊第4层', interval: 210, icon: '&#x1F54A;&#xFE0F;' },
+  { id: 'boss5', name: '深渊之主', map: '深渊第5层', interval: 240, icon: '&#x1F451;' },
+  { id: 'boss6', name: '暗影之王', map: '世界Boss', interval: 360, icon: '&#x1F451;' },
+];
+
+function initBossTimer() {
+  const saved = localStorage.getItem('dynew_boss_dead');
+  const deadTimes = saved ? JSON.parse(saved) : {};
+  const container = document.getElementById('bossContainer');
+  if (!container) return;
+
+  bossLoop = setInterval(() => {
+    const now = Date.now();
+    let html = '';
+    BOSS_SCHEDULE.forEach(b => {
+      const lastKill = deadTimes[b.id] || (now - b.interval * 60000 + 50000);
+      const nextSpawn = lastKill + b.interval * 60000;
+      const diff = nextSpawn - now;
+      const isAlive = diff <= 0;
+      const mins = Math.floor(Math.abs(diff) / 60000);
+      const secs = Math.floor((Math.abs(diff) % 60000) / 1000);
+      const timeStr = isAlive ? '已刷新' : `${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
+      html += `<div class="boss-item">
+        <div><span class="name">${b.icon} ${b.name}</span><br><span class="time">${b.map} · 每${b.interval}分钟刷新</span></div>
+        <div style="text-align:right">
+          <div class="countdown" style="color:${isAlive ? '#27ae60' : 'var(--accent-red)'}">${timeStr}</div>
+          <button class="tool-btn" style="font-size:0.75rem;padding:2px 10px;margin-top:4px;background:var(--bg-hover);color:var(--text-secondary);border:1px solid var(--border);border-radius:20px;cursor:pointer" onclick="markDead('${b.id}')">标记已击杀</button>
+        </div>
+      </div>`;
+    });
+    container.innerHTML = html;
+  }, 1000);
+}
+
+function markDead(id) {
+  const saved = localStorage.getItem('dynew_boss_dead');
+  const deadTimes = saved ? JSON.parse(saved) : {};
+  deadTimes[id] = Date.now();
+  localStorage.setItem('dynew_boss_dead', JSON.stringify(deadTimes));
+}
+
+let bossLoop = null;
+initBossTimer();
+
+// ==================== PROFIT CALCULATOR ====================
+function calcProfit() {
+  const jobEff = parseFloat(document.getElementById('jobSelect').value);
+  const dungeonCnt = parseInt(document.getElementById('dungeonCount').value) || 0;
+  const dungeonVal = parseInt(document.getElementById('dungeonProfit').value) || 0;
+  const farmHrs = parseInt(document.getElementById('farmHours').value) || 0;
+
+  const dailyDungeon = dungeonCnt * dungeonVal;
+  const hourlyFarm = 1500 * jobEff;
+  const dailyFarm = farmHrs * hourlyFarm;
+  const daily = dailyDungeon + dailyFarm;
+  const weekly = daily * 7;
+  const monthly = daily * 30;
+  const monthlyCNY = (monthly / 10000 * 2).toFixed(1);
+
+  document.getElementById('dailyProfit').textContent = daily.toLocaleString() + ' 金';
+  document.getElementById('weeklyProfit').textContent = weekly.toLocaleString() + ' 金';
+  document.getElementById('monthlyProfit').textContent = monthly.toLocaleString() + ' 金';
+  document.getElementById('monthlyCNY').textContent = '¥' + monthlyCNY;
+}
+
+calcProfit();
+
+// Save calculator state
+document.addEventListener('DOMContentLoaded', () => {
+  const savedCalc = localStorage.getItem('dynew_calc');
+  if (savedCalc) {
+    const d = JSON.parse(savedCalc);
+    document.getElementById('jobSelect').value = d.job || '1.0';
+    document.getElementById('dungeonCount').value = d.dungeonCount || 3;
+    document.getElementById('dungeonProfit').value = d.dungeonProfit || 5000;
+    document.getElementById('farmHours').value = d.farmHours || 6;
+    calcProfit();
+  }
+  ['jobSelect','dungeonCount','dungeonProfit','farmHours'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('change', () => {
+      const data = {
+        job: document.getElementById('jobSelect').value,
+        dungeonCount: document.getElementById('dungeonCount').value,
+        dungeonProfit: document.getElementById('dungeonProfit').value,
+        farmHours: document.getElementById('farmHours').value,
+      };
+      localStorage.setItem('dynew_calc', JSON.stringify(data));
+      calcProfit();
+    });
+  });
+});
+</script>
+</body>
+</html>

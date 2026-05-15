@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>副本攻略 on 渡鸦2攻略站</title>
+    <link>https://yvan520.github.io/dynew/categories/%E5%89%AF%E6%9C%AC%E6%94%BB%E7%95%A5/</link>
+    <description>Recent content in 副本攻略 on 渡鸦2攻略站</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yvan520.github.io/dynew/categories/%E5%89%AF%E6%9C%AC%E6%94%BB%E7%95%A5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>渡鸦2深渊Boss全攻略：暗影领主到深渊之主机制详解</title>
+      <link>https://yvan520.github.io/dynew/guides/guide-boss/</link>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://yvan520.github.io/dynew/guides/guide-boss/</guid>
+      <description>深渊副本5层Boss全攻略，技能机制、团队配置、站位教学。</description>
+    </item>
+    <item>
+      <title>渡鸦2公会战攻略：战术布局、指挥技巧、职业搭配</title>
+      <link>https://yvan520.github.io/dynew/guides/guide-guildwar/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://yvan520.github.io/dynew/guides/guide-guildwar/</guid>
+      <description>公会战完整攻略：地图解析、分路策略、指挥技巧、职业搭配推荐。</description>
+    </item>
+  </channel>
+</rss>

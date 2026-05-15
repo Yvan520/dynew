@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渡鸦2新纪元攻略站 - Raven2 职业推荐、搬砖赚钱、副本攻略大全</title>
+  <meta name="description" content="渡鸦2新纪元（Raven2）最全攻略站。提供六大职业加点、平民搬砖赚钱路线、天堂之石搭配、深渊Boss打法、PVP上分技巧，新手入门到毕业一站式攻略。">
+  <meta name="keywords" content="渡鸦2攻略,渡鸦2新纪元,Raven2,渡鸦2职业推荐,渡鸦2搬砖,渡鸦2手游攻略">
+  <link rel="stylesheet" href="/dynew/css/style.css">
+  <link rel="canonical" href="https://yvan520.github.io/dynew/">
+  <style>
+    body.homepage-only { background: #0a0a0f; color: #cccccc; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; margin: 0; }
+    .h-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .h-inner .logo { font-size: 1.4rem; font-weight: 700; color: #e8e8ee; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .h-inner .logo span { color: #c0392b; }
+    .h-inner nav a { color: #9999aa; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; }
+    .h-inner nav a:hover { color: #e8e8ee; background: #222233; }
+    .hero-c { background: linear-gradient(135deg, #0a0a1a 0%, #1a0a0a 50%, #0a0a1a 100%); padding: 80px 0 60px; text-align: center; border-bottom: 1px solid #2a2a3a; }
+    .hero-c h1 { font-size: 3rem; font-weight: 800; margin-bottom: 12px; color: #e8e8ee; }
+    .hero-c h1 span { color: #c0392b; }
+    .hero-c p { font-size: 1.1rem; color: #9999aa; max-width: 600px; margin: 0 auto 32px; }
+    .btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 24px; border-radius: 6px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: 0.2s ease; }
+    .btn-p { background: #c0392b; color: #fff; }
+    .btn-p:hover { background: #e74c3c; }
+    .btn-o { background: transparent; color: #e8e8ee; border: 1px solid #2a2a3a; }
+    .btn-o:hover { border-color: #c0392b; color: #c0392b; }
+    .sec { padding: 60px 0; }
+    .sec-a { background: #12121a; }
+    .sec .c { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .sh { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+    .sh h2 { font-size: 1.6rem; font-weight: 700; color: #e8e8ee; }
+    .sh p { color: #9999aa; font-size: 0.95rem; }
+    .cg { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+    .cc { background: #1a1a26; border: 1px solid #2a2a3a; border-radius: 10px; padding: 24px 16px; text-align: center; cursor: pointer; text-decoration: none; color: inherit; transition: 0.2s ease; display: block; }
+    .cc:hover { border-color: #c0392b; transform: translateY(-3px); }
+    .cc .icon { font-size: 2.5rem; margin-bottom: 10px; }
+    .cc .name { font-weight: 600; font-size: 0.95rem; color: #e8e8ee; }
+    .cc .desc { font-size: 0.8rem; color: #9999aa; margin-top: 4px; }
+    .gg { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+    .gc { background: #1a1a26; border: 1px solid #2a2a3a; border-radius: 10px; overflow: hidden; transition: 0.2s ease; }
+    .gc:hover { border-color: #c0392b; }
+    .gci { height: 160px; background: #222233; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #666677; }
+    .gcb { padding: 16px 20px 20px; }
+    .tag { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-bottom: 8px; }
+    .t-new { background: rgba(108,92,231,0.2); color: #6c5ce7; }
+    .t-class { background: rgba(192,57,43,0.2); color: #c0392b; }
+    .t-pvp { background: rgba(52,152,219,0.2); color: #3498db; }
+    .t-gear { background: rgba(46,204,113,0.2); color: #2ecc71; }
+    .gc h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .gc h3 a { color: #e8e8ee; text-decoration: none; }
+    .gc h3 a:hover { color: #c0392b; }
+    .gc p { font-size: 0.85rem; color: #9999aa; margin-bottom: 12px; }
+    .gc .meta { font-size: 0.8rem; color: #666677; display: flex; gap: 16px; }
+    .tl { position: relative; padding-left: 32px; }
+    .tl::before { content: ''; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: #2a2a3a; }
+    .tl-item { position: relative; margin-bottom: 28px; }
+    .tl-item::before { content: ''; position: absolute; left: -26px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #c0392b; border: 2px solid #0a0a0f; }
+    .tl-item .d { font-size: 0.8rem; color: #c0392b; margin-bottom: 4px; }
+    .tl-item h3 { font-size: 1rem; margin-bottom: 4px; color: #e8e8ee; }
+    .tl-item p { font-size: 0.85rem; color: #9999aa; }
+    .ft { background: #12121a; border-top: 1px solid #2a2a3a; padding: 32px 0; margin-top: 60px; }
+    .ft-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .ft p { color: #666677; font-size: 0.85rem; margin: 0; }
+    .ft a { color: #666677; text-decoration: none; }
+    .ft a:hover { color: #c0392b; }
+    @media (max-width: 768px) {
+      .hero-c h1 { font-size: 2rem; }
+      .gg { grid-template-columns: 1fr; }
+      .cg { grid-template-columns: repeat(2, 1fr); }
+      .sec { padding: 40px 0; }
+      .h-inner nav a { padding: 8px; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body class="homepage-only">
+<header style="background:#12121a;border-bottom:1px solid #2a2a3a;position:sticky;top:0;z-index:100;">
+  <div class="h-inner">
+    <a href="/dynew/" class="logo">&#x1F987; <span>渡鸦2</span> 攻略站</a>
+    <nav>
+      <a href="/dynew/guides/">攻略</a>
+      <a href="/dynew/classes.html">职业</a>
+      <a href="/dynew/tools.html">工具</a>
+      <a href="/dynew/database.html">资料库</a>
+      <a href="/dynew/news.html">资讯</a>
+      <a href="/dynew/about.html">关于</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-c">
+  <div class="c">
+    <h1>&#x1F987; 渡鸦2 <span>新纪元</span></h1>
+    <p>Netmarble 暗黑奇幻 MMORPG 正统续作 &mdash; 六大职业、天堂之石、开放世界<br>最全攻略站，助你主宰暗黑世界</p>
+    <div class="hero-actions" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="/dynew/guides/" class="btn btn-p">&#x1F4D6; 浏览攻略</a>
+      <a href="/dynew/guides/newbie-class/" class="btn btn-o">&#x1F393; 职业推荐</a>
+      <a href="/dynew/guides/farm-guide/" class="btn btn-o">&#x1F4B0; 搬砖赚钱</a>
+      <a href="/dynew/database.html" class="btn btn-o">&#x1F4CA; 资料库</a>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="c">
+    <div class="sh">
+      <div>
+        <h2>&#x2694;&#xFE0F; 六大职业</h2>
+        <p>选择你的职业，开启暗黑征途</p>
+      </div>
+      <a href="/dynew/classes.html" class="btn btn-o">查看全部 &rarr;</a>
+    </div>
+    <div class="cg">
+      <a href="/dynew/classes.html#sader" class="cc"><div class="icon">&#x1F54A;&#xFE0F;</div><div class="name">神圣法师</div><div class="desc">魔法输出 · 治疗辅助</div></a>
+      <a href="/dynew/classes.html#berserker" class="cc"><div class="icon">&#x1F5E1;&#xFE0F;</div><div class="name">狂战士</div><div class="desc">近战爆发 · 持续输出</div></a>
+      <a href="/dynew/classes.html#night" class="cc"><div class="icon">&#x1F319;</div><div class="name">夜巡者</div><div class="desc">远程物理 · 高机动性</div></a>
+      <a href="/dynew/classes.html#vanguard" class="cc"><div class="icon">&#x1F6E1;&#xFE0F;</div><div class="name">先锋</div><div class="desc">近战坦克 · 团队守护</div></a>
+      <a href="/dynew/classes.html#elementalist" class="cc"><div class="icon">&#x2728;</div><div class="name">元素使</div><div class="desc">元素魔法 · 组合连招</div></a>
+      <a href="/dynew/classes.html#destroyer" class="cc"><div class="icon">&#x1F4A5;</div><div class="name">毁灭者</div><div class="desc">范围爆发 · 控制压制</div></a>
+    </div>
+  </div>
+</div>
+
+<div class="sec sec-a">
+  <div class="c">
+    <div class="sh">
+      <div>
+        <h2>&#x1F4D6; 最新攻略</h2>
+        <p>新手入门、职业培养、副本挑战，一网打尽</p>
+      </div>
+      <a href="/dynew/guides/" class="btn btn-o">全部攻略 &rarr;</a>
+    </div>
+    <div class="gg">
+      <div class="gc"><div class="gci">&#x1F393;</div><div class="gcb"><span class="tag t-new">新手入门</span><h3><a href="/dynew/guides/guide-newbie/">渡鸦2新手入门指南：从零到满级</a></h3><p>职业选择、主线任务流程、快速升级技巧。</p><div class="meta"><span>&#x1F4C5; 2026-05-10</span></div></div></div>
+      <div class="gc"><div class="gci">&#x1F48E;</div><div class="gcb"><span class="tag t-gear">装备打造</span><h3><a href="/dynew/guides/guide-heavenstone/">天堂之石系统详解</a></h3><p>天堂之石获取途径、属性选择、职业搭配。</p><div class="meta"><span>&#x1F4C5; 2026-05-08</span></div></div></div>
+      <div class="gc"><div class="gci">&#x1F47E;</div><div class="gcb"><span class="tag t-class">副本攻略</span><h3><a href="/dynew/guides/guide-boss/">深渊Boss全攻略</a></h3><p>5层Boss技能机制详解、团队配置推荐。</p><div class="meta"><span>&#x1F4C5; 2026-05-06</span></div></div></div>
+      <div class="gc"><div class="gci">&#x2694;&#xFE0F;</div><div class="gcb"><span class="tag t-pvp">PVP攻略</span><h3><a href="/dynew/guides/guide-pvp/">竞技场上分攻略</a></h3><p>职业克制、连招技巧、阵容搭配。</p><div class="meta"><span>&#x1F4C5; 2026-05-04</span></div></div></div>
+      <div class="gc"><div class="gci">&#x1F5E1;&#xFE0F;</div><div class="gcb"><span class="tag t-class">职业攻略</span><h3><a href="/dynew/guides/guide-berserker/">狂战士终极养成</a></h3><p>技能加点、装备搭配、连招教学。</p><div class="meta"><span>&#x1F4C5; 2026-05-02</span></div></div></div>
+      <div class="gc"><div class="gci">&#x1F3AE;</div><div class="gcb"><span class="tag t-new">新手入门</span><h3><a href="/dynew/guides/guide-tips/">渡鸦2新手必知10大技巧</a></h3><p>钻石怎么花、搬砖赚钱、免费福利。</p><div class="meta"><span>&#x1F4C5; 2026-04-28</span></div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="c">
+    <div class="sh">
+      <div>
+        <h2>&#x1F514; 最新资讯</h2>
+        <p>版本更新、活动预告、官方动态</p>
+      </div>
+      <a href="/dynew/news.html" class="btn btn-o">查看全部 &rarr;</a>
+    </div>
+    <div class="tl">
+      <div class="tl-item"><div class="d">2026-05-12</div><h3>v2.11.03 版本更新公告</h3><p>新增深渊Boss暗影之王，平衡性调整。</p></div>
+      <div class="tl-item"><div class="d">2026-05-01</div><h3>五一限时活动：双倍经验</h3><p>活动期间副本掉落双倍，登录送称号。</p></div>
+      <div class="tl-item"><div class="d">2026-04-15</div><h3>新职业毁灭者正式上线</h3><p>第六职业毁灭者登场，范围爆发型法师。</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="ft">
+  <div class="ft-inner">
+    <p>&copy; 2026 渡鸦2攻略站 — 玩家共建攻略社区 | <a href="/dynew/privacy.html">隐私政策</a></p>
+    <p>游戏版权 &copy; Netmarble Corporation | 本站为玩家攻略站，非官方</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>副本 on 渡鸦2攻略站</title>
+    <link>https://yvan520.github.io/dynew/tags/%E5%89%AF%E6%9C%AC/</link>
+    <description>Recent content in 副本 on 渡鸦2攻略站</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yvan520.github.io/dynew/tags/%E5%89%AF%E6%9C%AC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>渡鸦2深渊Boss全攻略：暗影领主到深渊之主机制详解</title>
+      <link>https://yvan520.github.io/dynew/guides/guide-boss/</link>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://yvan520.github.io/dynew/guides/guide-boss/</guid>
+      <description>深渊副本5层Boss全攻略，技能机制、团队配置、站位教学。</description>
+    </item>
+    <item>
+      <title>渡鸦2搬砖副本推荐：哪个副本最赚钱？收益排行</title>
+      <link>https://yvan520.github.io/dynew/guides/farm-dungeon/</link>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://yvan520.github.io/dynew/guides/farm-dungeon/</guid>
+      <description>副本和野外地图收益排行、高价值材料TOP5、最优搬砖方案。</description>
+    </item>
+    <item>
+      <title>渡鸦2先锋坦克攻略：拉怪手法、减伤链循环、副本Boss机制</title>
+      <link>https://yvan520.github.io/dynew/guides/guide-vanguard/</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://yvan520.github.io/dynew/guides/guide-vanguard/</guid>
+      <description>先锋坦克完整指南：仇恨机制、减伤技能循环、拉怪技巧、装备属性。</description>
+    </item>
+  </channel>
+</rss>
