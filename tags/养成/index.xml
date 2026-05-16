@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>养成 on 渡鸦2攻略站</title>
+    <link>https://yvan520.github.io/dynew/tags/%E5%85%BB%E6%88%90/</link>
+    <description>Recent content in 养成 on 渡鸦2攻略站</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yvan520.github.io/dynew/tags/%E5%85%BB%E6%88%90/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>渡鸦2使魔系统详解：使魔获取、培养、技能搭配全攻略</title>
+      <link>https://yvan520.github.io/dynew/guides/guide-familiar/</link>
+      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://yvan520.github.io/dynew/guides/guide-familiar/</guid>
+      <description>使魔获取途径、资质选择、技能搭配推荐、进阶养成路线。平民和氪金分别怎么玩。</description>
+    </item>
+    <item>
+      <title>渡鸦2坐骑系统攻略：坐骑获取、养成、移速加成详解</title>
+      <link>https://yvan520.github.io/dynew/guides/guide-mount/</link>
+      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://yvan520.github.io/dynew/guides/guide-mount/</guid>
+      <description>全坐骑获取方式、培养材料来源、移速加成数据、坐骑技能选择。跑图必备。</description>
+    </item>
+  </channel>
+</rss>

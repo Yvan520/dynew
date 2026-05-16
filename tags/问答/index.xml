@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>问答 on 渡鸦2攻略站</title>
+    <link>https://yvan520.github.io/dynew/tags/%E9%97%AE%E7%AD%94/</link>
+    <description>Recent content in 问答 on 渡鸦2攻略站</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yvan520.github.io/dynew/tags/%E9%97%AE%E7%AD%94/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>渡鸦2常见问题FAQ大全：新手问答与游戏机制详解</title>
+      <link>https://yvan520.github.io/dynew/guides/guide-faq/</link>
+      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://yvan520.github.io/dynew/guides/guide-faq/</guid>
+      <description>渡鸦2最常遇到的问题汇总：装备绑定、交易限制、等级上限、职业转换等。</description>
+    </item>
+  </channel>
+</rss>
