@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://yvan520.github.io/dynew/sitemap.xml
+Sitemap: https://dynew.gamewayz.com/sitemap.xml

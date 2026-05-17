@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>镶嵌 on 渡鸦2攻略站</title>
-    <link>https://yvan520.github.io/dynew/tags/%E9%95%B6%E5%B5%8C/</link>
+    <link>https://dynew.gamewayz.com/tags/%E9%95%B6%E5%B5%8C/</link>
     <description>Recent content in 镶嵌 on 渡鸦2攻略站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yvan520.github.io/dynew/tags/%E9%95%B6%E5%B5%8C/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dynew.gamewayz.com/tags/%E9%95%B6%E5%B5%8C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>渡鸦2宝石镶嵌攻略：6种宝石属性、各职业最佳搭配方案</title>
-      <link>https://yvan520.github.io/dynew/guides/guide-gem/</link>
+      <link>https://dynew.gamewayz.com/guides/guide-gem/</link>
       <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://yvan520.github.io/dynew/guides/guide-gem/</guid>
+      <guid>https://dynew.gamewayz.com/guides/guide-gem/</guid>
       <description>宝石系统完整攻略：红宝石/蓝宝石/黄宝石等6种宝石属性、各职业镶嵌推荐。</description>
     </item>
     <item>
       <title>渡鸦2宝石系统全攻略：宝石类型、镶嵌方案、合成技巧</title>
-      <link>https://yvan520.github.io/dynew/guides/guide-gem-socket/</link>
+      <link>https://dynew.gamewayz.com/guides/guide-gem-socket/</link>
       <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://yvan520.github.io/dynew/guides/guide-gem-socket/</guid>
+      <guid>https://dynew.gamewayz.com/guides/guide-gem-socket/</guid>
       <description>全宝石属性介绍、各职业最佳镶嵌方案、宝石合成概率、省钱合成技巧。</description>
     </item>
   </channel>

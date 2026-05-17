@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>面板 on 渡鸦2攻略站</title>
-    <link>https://yvan520.github.io/dynew/tags/%E9%9D%A2%E6%9D%BF/</link>
+    <link>https://dynew.gamewayz.com/tags/%E9%9D%A2%E6%9D%BF/</link>
     <description>Recent content in 面板 on 渡鸦2攻略站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yvan520.github.io/dynew/tags/%E9%9D%A2%E6%9D%BF/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dynew.gamewayz.com/tags/%E9%9D%A2%E6%9D%BF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>渡鸦2属性面板详解：攻击、穿透、暴击、格挡全解析</title>
-      <link>https://yvan520.github.io/dynew/guides/guide-stats/</link>
+      <link>https://dynew.gamewayz.com/guides/guide-stats/</link>
       <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://yvan520.github.io/dynew/guides/guide-stats/</guid>
+      <guid>https://dynew.gamewayz.com/guides/guide-stats/</guid>
       <description>全属性含义解读、计算公式科普、各职业属性收益权重。看懂面板才能配好装备。</description>
     </item>
   </channel>

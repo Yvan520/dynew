@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>副本攻略 on 渡鸦2攻略站</title>
-    <link>https://yvan520.github.io/dynew/categories/%E5%89%AF%E6%9C%AC%E6%94%BB%E7%95%A5/</link>
+    <link>https://dynew.gamewayz.com/categories/%E5%89%AF%E6%9C%AC%E6%94%BB%E7%95%A5/</link>
     <description>Recent content in 副本攻略 on 渡鸦2攻略站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yvan520.github.io/dynew/categories/%E5%89%AF%E6%9C%AC%E6%94%BB%E7%95%A5/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dynew.gamewayz.com/categories/%E5%89%AF%E6%9C%AC%E6%94%BB%E7%95%A5/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>渡鸦2深渊Boss全攻略：暗影领主到深渊之主机制详解</title>
-      <link>https://yvan520.github.io/dynew/guides/guide-boss/</link>
+      <link>https://dynew.gamewayz.com/guides/guide-boss/</link>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://yvan520.github.io/dynew/guides/guide-boss/</guid>
+      <guid>https://dynew.gamewayz.com/guides/guide-boss/</guid>
       <description>深渊副本5层Boss全攻略，技能机制、团队配置、站位教学。</description>
     </item>
     <item>
       <title>渡鸦2公会战攻略：战术布局、指挥技巧、职业搭配</title>
-      <link>https://yvan520.github.io/dynew/guides/guide-guildwar/</link>
+      <link>https://dynew.gamewayz.com/guides/guide-guildwar/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://yvan520.github.io/dynew/guides/guide-guildwar/</guid>
+      <guid>https://dynew.gamewayz.com/guides/guide-guildwar/</guid>
       <description>公会战完整攻略：地图解析、分路策略、指挥技巧、职业搭配推荐。</description>
     </item>
     <item>
       <title>渡鸦2副本掉落大全：全Boss掉落装备材料汇总</title>
-      <link>https://yvan520.github.io/dynew/guides/dungeon-drops/</link>
+      <link>https://dynew.gamewayz.com/guides/dungeon-drops/</link>
       <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://yvan520.github.io/dynew/guides/dungeon-drops/</guid>
+      <guid>https://dynew.gamewayz.com/guides/dungeon-drops/</guid>
       <description>深渊1-5层、世界Boss、野外精英掉落汇总。搬砖党必备查询表。</description>
     </item>
     <item>
       <title>渡鸦2副本组队配置指南：各副本职业搭配与队长技巧</title>
-      <link>https://yvan520.github.io/dynew/guides/guide-party/</link>
+      <link>https://dynew.gamewayz.com/guides/guide-party/</link>
       <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://yvan520.github.io/dynew/guides/guide-party/</guid>
+      <guid>https://dynew.gamewayz.com/guides/guide-party/</guid>
       <description>各副本最优职业搭配、队伍站位分工、队长指挥技巧。告别野队翻车。</description>
     </item>
   </channel>

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>AOE on 渡鸦2攻略站</title>
-    <link>https://yvan520.github.io/dynew/tags/aoe/</link>
+    <link>https://dynew.gamewayz.com/tags/aoe/</link>
     <description>Recent content in AOE on 渡鸦2攻略站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yvan520.github.io/dynew/tags/aoe/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dynew.gamewayz.com/tags/aoe/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>渡鸦2元素使攻略：元素组合效果、AOE爆发循环、PVP控制连招</title>
-      <link>https://yvan520.github.io/dynew/guides/guide-elementalist/</link>
+      <link>https://dynew.gamewayz.com/guides/guide-elementalist/</link>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://yvan520.github.io/dynew/guides/guide-elementalist/</guid>
+      <guid>https://dynew.gamewayz.com/guides/guide-elementalist/</guid>
       <description>元素使进阶教学：火冰雷风四种元素组合、PVE清怪循环、PVP冰雷控制。</description>
     </item>
     <item>
       <title>渡鸦2毁灭者攻略：范围爆发连招、PVP控制链、装备搭配</title>
-      <link>https://yvan520.github.io/dynew/guides/guide-destroyer/</link>
+      <link>https://dynew.gamewayz.com/guides/guide-destroyer/</link>
       <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://yvan520.github.io/dynew/guides/guide-destroyer/</guid>
+      <guid>https://dynew.gamewayz.com/guides/guide-destroyer/</guid>
       <description>第六职业毁灭者攻略：暗影之握拉人接毁灭风暴AOE连招、PVP恐惧控制链。</description>
     </item>
   </channel>
