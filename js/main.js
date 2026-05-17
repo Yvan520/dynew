@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     headerSearch.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
         const q = encodeURIComponent(headerSearch.value.trim());
-        if (q) window.location.href = `/dynew/guides.html?q=${q}`;
+        if (q) window.location.href = `/guides.html?q=${q}`;
       }
     });
   }
