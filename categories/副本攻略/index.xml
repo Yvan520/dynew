@@ -6,7 +6,7 @@
     <description>Recent content in 副本攻略 on 渡鸦2攻略站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dynew.gamewayz.com/categories/%E5%89%AF%E6%9C%AC%E6%94%BB%E7%95%A5/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>渡鸦2深渊Boss全攻略：暗影领主到深渊之主机制详解</title>
@@ -35,6 +35,20 @@
       <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
       <guid>https://dynew.gamewayz.com/guides/guide-party/</guid>
       <description>各副本最优职业搭配、队伍站位分工、队长指挥技巧。告别野队翻车。</description>
+    </item>
+    <item>
+      <title>渡鸦2野外Boss刷新时间表与击杀攻略：世界Boss全图鉴</title>
+      <link>https://dynew.gamewayz.com/guides/guide-boss-field/</link>
+      <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-boss-field/</guid>
+      <description>全野外Boss刷新位置、刷新时间、掉落物品、抢Boss技巧。世界Boss收益最大化。</description>
+    </item>
+    <item>
+      <title>渡鸦2公会副本攻略：副本机制、队伍配置、奖励详解</title>
+      <link>https://dynew.gamewayz.com/guides/guide-guild-dungeon/</link>
+      <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-guild-dungeon/</guid>
+      <description>公会副本完整攻略：每周开放时间、Boss机制、队伍配置推荐、奖励兑换指南。公会核心玩法。</description>
     </item>
   </channel>
 </rss>
