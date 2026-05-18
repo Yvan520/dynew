@@ -74,6 +74,9 @@ img { max-width: 100%; display: block; }
 
 .hamburger { display: none; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; padding: 4px; }
 
+.nav a[title="搜索攻略"] { font-size: 1.1rem; padding: 6px 10px; }
+.nav a[title="搜索攻略"]:hover { background: var(--bg-hover); border-radius: 6px; color: var(--accent-primary); }
+
 /* Hero */
 .hero {
   background: linear-gradient(135deg, #0a0a1a 0%, #1a0a0a 50%, #0a0a1a 100%);
