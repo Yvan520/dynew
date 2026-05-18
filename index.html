@@ -237,6 +237,39 @@
       50% { transform: translateX(-50%) translateY(6px); }
     }
 
+    .hero-search {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50px;
+      padding: 12px 24px;
+      max-width: 520px;
+      width: 100%;
+      margin: 28px auto 0;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+    .hero-search:focus-within {
+      border-color: #c0392b;
+      background: rgba(255,255,255,0.1);
+      box-shadow: 0 0 24px rgba(192,57,43,0.2);
+    }
+    .hero-search-icon { color: rgba(255,255,255,0.4); font-size: 1.1rem; flex-shrink: 0; }
+    .hero-search input {
+      background: none;
+      border: none;
+      outline: none;
+      color: #fff;
+      width: 100%;
+      font-size: 0.95rem;
+      font-family: inherit;
+    }
+    .hero-search input::placeholder { color: rgba(255,255,255,0.3); }
+    .hero-search input::-webkit-search-decoration,
+    .hero-search input::-webkit-search-cancel-button { display: none; }
+
     @media (max-width: 768px) {
       .hero-c { min-height: 70vh; }
       .hero-c h1 { font-size: 2rem; }
@@ -275,6 +308,10 @@
       <a href="/guides/guide-tips/" class="btn btn-o">&#x1F393; 新手必看</a>
       <a href="/guides/farm-guide/" class="btn btn-o">&#x1F4B0; 搬砖赚钱</a>
       <a href="/tools.html" class="btn btn-o">&#x1F4CA; 实用工具</a>
+    </div>
+    <div class="hero-search">
+      <span class="hero-search-icon">&#x1F50D;</span>
+      <input type="text" id="heroSearchInput" placeholder="搜索攻略，输入关键词..." autocomplete="off">
     </div>
   </div>
   <div class="hero-scroll">&#x2193; 向下滚动</div>
@@ -354,5 +391,18 @@
     <p>游戏版权 &copy; Netmarble Corporation | 本站为玩家攻略站，非官方</p>
   </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('heroSearchInput');
+  if (input) {
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const q = encodeURIComponent(input.value.trim());
+        if (q) window.location.href = '/search/?q=' + q;
+      }
+    });
+  }
+});
+</script>
 </body>
 </html>
