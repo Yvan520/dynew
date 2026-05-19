@@ -6,7 +6,7 @@
     <description>Recent content in 竞技场 on 渡鸦2攻略站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dynew.gamewayz.com/tags/%E7%AB%9E%E6%8A%80%E5%9C%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>渡鸦2 PvP各职业打法技巧：克制关系与上分操作</title>
@@ -21,6 +21,13 @@
       <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
       <guid>https://dynew.gamewayz.com/guides/guide-pvp/</guid>
       <description>PVP竞技场上分攻略，职业克制关系表、PVP连招教学、3v3阵容推荐。</description>
+    </item>
+    <item>
+      <title>渡鸦2竞技场PVP进阶上分攻略：段位系统、职业强度排行、连招克制</title>
+      <link>https://dynew.gamewayz.com/guides/guide-pvp-arena/</link>
+      <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-pvp-arena/</guid>
+      <description>竞技场PVP深度攻略：段位机制完整说明、当前版本职业强度排行T0-T3、全职业技能连招、反制策略。钻石段位以上必看。</description>
     </item>
   </channel>
 </rss>

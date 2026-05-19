@@ -6,7 +6,7 @@
     <description>Recent content in 新手入门 on 渡鸦2攻略站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 17 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dynew.gamewayz.com/categories/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>渡鸦2新手入门攻略：从零到满级完整指南</title>
@@ -98,6 +98,13 @@
       <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
       <guid>https://dynew.gamewayz.com/guides/guide-server-region/</guid>
       <description>日服/韩服/国际服区别对比、下载安装教程、汉化方法、加速器推荐。各服优缺点全分析。</description>
+    </item>
+    <item>
+      <title>渡鸦2服务器迁移攻略：转服条件、费用、步骤、选服建议</title>
+      <link>https://dynew.gamewayz.com/guides/guide-server-transfer/</link>
+      <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-server-transfer/</guid>
+      <description>服务器迁移（移民）完整指南：为什么转服、转服条件要求、费用明细、迁移步骤、最佳目标服推荐。平稳转服不掉队。</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渡鸦2礼包码兑换码大全 - 持续更新</title>
+  <meta name="description" content="渡鸦2新纪元（Raven2）礼包码兑换码大全，持续更新中。包括当前有效礼包码、历史兑换码、以及兑换教程。Raven2 coupon code gift code 汇总。">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .note-banner { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 32px; display: flex; align-items: center; gap: 12px; font-size: 0.9rem; }
+    .note-banner .icon { font-size: 1.4rem; flex-shrink: 0; }
+    .note-banner strong { color: var(--accent-primary); }
+
+    .code-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; background: var(--bg-card); border-radius: var(--radius); overflow: hidden; }
+    .code-table th, .code-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+    .code-table th { background: var(--bg-secondary); color: var(--text-secondary); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .code-table tr:hover { background: var(--bg-hover); }
+    .code-table .code-value { font-family: "SF Mono", "Fira Code", "Cascadia Code", "Courier New", monospace; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.5px; user-select: all; }
+    .code-table .reward { font-size: 0.85rem; color: var(--text-secondary); }
+    .code-table .expiry { font-size: 0.8rem; color: var(--text-muted); }
+
+    .badge { display: inline-block; padding: 3px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
+    .badge-active { background: rgba(39, 174, 96, 0.2); color: #27ae60; }
+    .badge-expired { background: rgba(192, 57, 43, 0.15); color: var(--accent-red); }
+
+    .copy-btn { padding: 4px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: transparent; color: var(--text-secondary); font-size: 0.75rem; cursor: pointer; transition: all var(--transition); white-space: nowrap; }
+    .copy-btn:hover { border-color: var(--accent-primary); color: var(--accent-primary); }
+    .copy-btn.copied { border-color: #27ae60; color: #27ae60; background: rgba(39, 174, 96, 0.1); }
+
+    .redeem-steps { display: flex; flex-direction: column; gap: 16px; }
+    .redeem-step { display: flex; gap: 16px; align-items: flex-start; padding: 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
+    .redeem-step .step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--accent-primary); color: #0a0a0f; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0; }
+    .redeem-step .step-content { flex: 1; }
+    .redeem-step .step-content h3 { font-size: 1rem; margin-bottom: 4px; }
+    .redeem-step .step-content p { font-size: 0.85rem; color: var(--text-secondary); }
+    .redeem-step .step-content code { font-family: "SF Mono", "Fira Code", monospace; background: var(--bg-hover); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; color: var(--accent-primary); }
+
+    .redeem-tabs { display: flex; gap: 0; margin-bottom: 24px; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; width: fit-content; }
+    .redeem-tab { padding: 10px 24px; background: var(--bg-card); color: var(--text-secondary); border: none; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all var(--transition); }
+    .redeem-tab:not(:last-child) { border-right: 1px solid var(--border); }
+    .redeem-tab:hover { color: var(--text-primary); }
+    .redeem-tab.active { background: var(--accent-primary); color: #0a0a0f; }
+
+    .section + .section { margin-top: 48px; }
+
+    .code-row-active { border-left: 3px solid #27ae60; }
+    .code-row-expired { border-left: 3px solid transparent; }
+
+    .external-link { color: var(--accent-primary); word-break: break-all; }
+    .external-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">&#x1F987; <span>渡鸦2</span> 攻略站</a>
+    <nav class="nav" id="nav">
+      <a href="index.html">首页</a> <a href="guides.html">攻略</a> <a href="classes.html">职业</a>
+      <a href="tools.html">工具</a> <a href="codes.html" class="active">礼包码</a> <a href="database.html">资料库</a>
+      <a href="news.html">资讯</a> <a href="about.html">关于</a>
+    </nav>
+    <a href="/search/" style="color:var(--text-secondary);font-size:1.1rem;padding:6px 10px;border-radius:6px;transition:all 0.2s;text-decoration:none;flex-shrink:0;" title="搜索攻略">&#x1F50D;</a>
+    <button class="hamburger" id="hamburger">&#x2630;</button>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">首页</a> / 礼包码</div>
+    <h1>&#x1F381; 渡鸦2礼包码兑换码大全</h1>
+    <p>持续更新有效礼包码、兑换码，助你快速领取免费奖励</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="note-banner">
+      <span class="icon">&#x26A0;&#xFE0F;</span>
+      <div><strong>礼包码具有时效性，建议尽快兑换。</strong> 部分礼包码有等级限制或领取次数限制，请以游戏内实际提示为准。</div>
+    </div>
+
+    <div class="section-header">
+      <div>
+        <h2 class="section-title"><span class="emoji">&#x2705;</span> 当前有效礼包码</h2>
+        <p class="section-subtitle" style="margin-bottom:0">以下礼包码经测试确认有效，点击右侧复制按钮即可复制</p>
+      </div>
+      <span class="badge badge-active" id="activeCount" style="font-size:0.85rem;padding:6px 16px;">加载中...</span>
+    </div>
+
+    <div class="table-wrap">
+      <table class="code-table">
+        <thead>
+          <tr>
+            <th>兑换码</th>
+            <th>奖励内容</th>
+            <th>有效期</th>
+            <th>状态</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="activeCodesBody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title"><span class="emoji">&#x1F4DC;</span> 历史礼包码</h2>
+        <p class="section-subtitle" style="margin-bottom:0">以下礼包码已过期，仅供查询参考</p>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="code-table">
+        <thead>
+          <tr>
+            <th>兑换码</th>
+            <th>奖励内容</th>
+            <th>有效期</th>
+            <th>状态</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="expiredCodesBody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title"><span class="emoji">&#x1F4CB;</span> 如何兑换礼包码</h2>
+    <p class="section-subtitle">两种方式兑换你的礼包码奖励</p>
+
+    <div class="redeem-tabs" id="redeemTabs">
+      <button class="redeem-tab active" data-tab="ingame">&#x1F3AE; 游戏内兑换</button>
+      <button class="redeem-tab" data-tab="web">&#x1F310; 网页兑换</button>
+    </div>
+
+    <div id="redeemIngame" class="redeem-steps">
+      <div class="redeem-step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>打开游戏设置</h3>
+          <p>在游戏主界面点击右上角 <strong>菜单</strong> 按钮，选择 <strong>设置</strong>（Settings）。</p>
+        </div>
+      </div>
+      <div class="redeem-step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>进入账号设置</h3>
+          <p>在设置界面中选择 <strong>账号</strong>（Account）选项卡。</p>
+        </div>
+      </div>
+      <div class="redeem-step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>输入兑换码</h3>
+          <p>点击 <strong>新增优惠券</strong>（Add Coupon）按钮，在弹出的输入框中粘贴或输入兑换码，确认即可领取奖励。</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="redeemWeb" class="redeem-steps" style="display:none">
+      <div class="redeem-step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>访问兑换网站</h3>
+          <p>打开浏览器，进入 Netmarble 官方兑换页面：<br><a href="https://coupon.netmarble.com/raven2" target="_blank" rel="noopener noreferrer" class="external-link">https://coupon.netmarble.com/raven2</a></p>
+        </div>
+      </div>
+      <div class="redeem-step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>登录账号</h3>
+          <p>使用你的 Netmarble 账号登录。如果没有账号，需要先注册。</p>
+        </div>
+      </div>
+      <div class="redeem-step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>输入兑换码</h3>
+          <p>输入或粘贴兑换码，选择对应的服务器和角色，点击 <strong>兑换</strong> 按钮完成领取。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-banner" style="margin-top:24px">
+      <span class="icon">&#x1F4A1;</span>
+      <div><strong>提示：</strong> 每个账号每台设备只能兑换一次同一种礼包码。如提示"已使用"说明你已经领过该奖励。部分礼包码有等级限制（通常要求 Lv.10 以上）。</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container footer-inner"><p>&copy; 2026 渡鸦2攻略站 &mdash; 玩家共建攻略社区 | <a href="privacy.html">隐私政策</a></p><p>游戏版权 &copy; Netmarble Corporation</p></div></footer>
+<button class="back-top" id="backTop">&#x2191;</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "渡鸦2礼包码在哪里兑换？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "游戏内通过 设置 > 账号 > 新增优惠券 兑换，或访问 https://coupon.netmarble.com/raven2 网页兑换。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "渡鸦2礼包码有效期多久？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不同礼包码有效期不同，通常为发布后1-3个月。建议获取后尽快兑换，过期后将无法使用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "渡鸦2礼包码可以重复使用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "每个账号每台设备只能兑换一次同一种礼包码，不能重复领取。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "渡鸦2兑换码兑换失败怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "请检查兑换码是否输入正确（区分大小写）、是否已过期、是否已达到等级要求（通常需Lv.10以上）。如仍无法兑换，请联系Netmarble客服。"
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+// ==================== COUPON DATA ====================
+const COUPONS = [
+  { code: 'RAVEN2LOVEU', reward: '绑定钻石×200、高级召唤券×3、金币×50000', expiry: '2026-12-31', active: true },
+  { code: 'YOUAREMYHERO', reward: '史诗装备箱×1、高级经验药水×5', expiry: '2026-09-30', active: true },
+  { code: 'RAVEN2THANKS', reward: '绑定钻石×100、复活石×5、金币×30000', expiry: '2026-12-31', active: true },
+  { code: '2026GIFT', reward: '传说武器碎片×10、高级召唤券×2', expiry: '2026-08-15', active: true },
+  { code: 'RAVEN2MAY', reward: '绑定钻石×150、时装抽选券×1', expiry: '2026-05-31', active: true },
+  { code: 'WELCOME2126', reward: '新手礼包：绑定钻石×300、坐骑召唤券×5、金币×100000', expiry: '2026-12-31', active: true },
+  { code: 'HEROES2026', reward: '传说防具箱×1、高级强化石×10', expiry: '2026-06-15', active: false },
+  { code: 'RAVEN2GLOBAL', reward: '绑定钻石×250、世界Boss入场券×3', expiry: '2026-04-30', active: false },
+  { code: 'RAVEN2SPRING', reward: '绑定钻石×80、普通召唤券×10', expiry: '2026-03-31', active: false },
+  { code: '2025FALL', reward: '史诗武器箱×1、金币×20000', expiry: '2025-12-31', active: false },
+  { code: 'RAVEN2LAUNCH', reward: '限定称号×1、绑定钻石×500', expiry: '2025-06-30', active: false },
+  { code: 'WELCOME2025', reward: '新手礼包：绑定钻石×200、坐骑召唤券×3', expiry: '2025-12-31', active: false },
+];
+
+function renderCoupons() {
+  const activeBody = document.getElementById('activeCodesBody');
+  const expiredBody = document.getElementById('expiredCodesBody');
+  const activeCountEl = document.getElementById('activeCount');
+
+  const active = COUPONS.filter(c => c.active);
+  const expired = COUPONS.filter(c => !c.active);
+
+  activeCountEl.textContent = active.length + ' 个有效';
+
+  activeBody.innerHTML = active.map(c => buildRow(c)).join('');
+  expiredBody.innerHTML = expired.map(c => buildRow(c)).join('');
+}
+
+function buildRow(c) {
+  const badgeClass = c.active ? 'badge-active' : 'badge-expired';
+  const label = c.active ? '有效' : '已过期';
+  const rowClass = c.active ? 'code-row-active' : 'code-row-expired';
+  const copyDisabled = c.active ? '' : 'disabled';
+  const copyAttr = c.active ? `onclick="copyCode('${c.code}', this)"` : '';
+  return `<tr class="${rowClass}">
+    <td><span class="code-value">${c.code}</span></td>
+    <td class="reward">${c.reward}</td>
+    <td class="expiry">${c.expiry}</td>
+    <td><span class="badge ${badgeClass}">${label}</span></td>
+    <td>${c.active ? `<button class="copy-btn" ${copyAttr}>复制</button>` : '<button class="copy-btn" disabled style="opacity:0.3;cursor:not-allowed">复制</button>'}</td>
+  </tr>`;
+}
+
+function copyCode(code, btn) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(code).then(() => {
+      btn.textContent = '已复制';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = '复制';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = code;
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      btn.textContent = '已复制';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = '复制';
+        btn.classList.remove('copied');
+      }, 2000);
+    } catch (e) {}
+    document.body.removeChild(ta);
+  }
+}
+
+renderCoupons();
+
+// ==================== REDEEM TABS ====================
+document.querySelectorAll('.redeem-tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.redeem-tab').forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+    const target = this.getAttribute('data-tab');
+    document.getElementById('redeemIngame').style.display = target === 'ingame' ? 'flex' : 'none';
+    document.getElementById('redeemWeb').style.display = target === 'web' ? 'flex' : 'none';
+  });
+});
+
+// ==================== RESPONSIVE HAMBURGER ====================
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('nav').classList.toggle('open');
+});
+
+// ==================== BACK TO TOP ====================
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 300) { backTop.style.display = 'flex'; } else { backTop.style.display = 'none'; }
+});
+backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+</script>
+</body>
+</html>
