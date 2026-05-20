@@ -6,7 +6,7 @@
     <description>Recent content in 材料 on 渡鸦2攻略站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dynew.gamewayz.com/tags/%E6%9D%90%E6%96%99/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>渡鸦2副本掉落大全：全Boss掉落装备材料汇总</title>
@@ -14,6 +14,20 @@
       <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
       <guid>https://dynew.gamewayz.com/guides/dungeon-drops/</guid>
       <description>深渊1-5层、世界Boss、野外精英掉落汇总。搬砖党必备查询表。</description>
+    </item>
+    <item>
+      <title>神器系统攻略：强化机制、失败碎片回收、高潔vs一般神器、各职业推荐</title>
+      <link>https://dynew.gamewayz.com/guides/guide-relic-system/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-relic-system/</guid>
+      <description>渡鸦2神器系統完整攻略：強化機制詳解、失敗碎片回收系統、高潔神器vs一般神器選擇、各職業最優神器搭配。</description>
+    </item>
+    <item>
+      <title>渡鸦2新纪元炼金系统全攻略：配方、材料与收益最大化</title>
+      <link>https://dynew.gamewayz.com/guides/guide-alchemy/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-alchemy/</guid>
+      <description>2026版炼金系统详解：配方大全、材料刷取路线、积分商店兑换优先级、效率最大化技巧。</description>
     </item>
   </channel>
 </rss>

@@ -6,7 +6,7 @@
     <description>Recent content on 渡鸦2攻略站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 19 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dynew.gamewayz.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>渡鸦2新手入门攻略：从零到满级完整指南</title>
@@ -282,6 +282,13 @@
       <description>全药水效果汇总、战斗药水最佳使用时机、食物Buff叠加规则、炼金配方一览。</description>
     </item>
     <item>
+      <title>圣衣变身系统终极指南：全稀有度升级路径、各职业推荐、材料获取</title>
+      <link>https://dynew.gamewayz.com/guides/guide-costume-system/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-costume-system/</guid>
+      <description>聖衣系統完整攻略：銀聖衣→金聖衣→傳說聖衣升級路徑、職業最優選擇、金聖衣成本分析、碎片的獲取與使用。</description>
+    </item>
+    <item>
       <title>渡鸦2全职业PVE输出手法：技能循环与爆发时机</title>
       <link>https://dynew.gamewayz.com/guides/guide-rotation/</link>
       <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
@@ -301,6 +308,13 @@
       <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
       <guid>https://dynew.gamewayz.com/guides/guide-f2p/</guid>
       <description>零氪玩家全方位生存攻略：水晶规划、装备获取、战力提升、副本通关技巧。零充也能玩。</description>
+    </item>
+    <item>
+      <title>神器系统攻略：强化机制、失败碎片回收、高潔vs一般神器、各职业推荐</title>
+      <link>https://dynew.gamewayz.com/guides/guide-relic-system/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-relic-system/</guid>
+      <description>渡鸦2神器系統完整攻略：強化機制詳解、失敗碎片回收系統、高潔神器vs一般神器選擇、各職業最優神器搭配。</description>
     </item>
     <item>
       <title>渡鸦2隐藏任务与隐藏地图攻略：特殊奖励全收集</title>
@@ -324,11 +338,25 @@
       <description>2026年最新版本六大职业强度排名、上手难度评分、新手最适合的职业推荐。选对职业少走半年弯路。</description>
     </item>
     <item>
+      <title>命中属性终极解析：公式计算、软硬上限、堆叠方案、80级卡关解决</title>
+      <link>https://dynew.gamewayz.com/guides/guide-hit-stats/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-hit-stats/</guid>
+      <description>渡鸦2命中屬性完全攻略：命中公式、深淵/混沌之塔各階層需求上限、裝備/寶石/星盤堆疊方案，命中vs無視減傷對比。</description>
+    </item>
+    <item>
       <title>渡鸦2属性面板详解：攻击、穿透、暴击、格挡全解析</title>
       <link>https://dynew.gamewayz.com/guides/guide-stats/</link>
       <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
       <guid>https://dynew.gamewayz.com/guides/guide-stats/</guid>
       <description>全属性含义解读、计算公式科普、各职业属性收益权重。看懂面板才能配好装备。</description>
+    </item>
+    <item>
+      <title>转职系统深度分析：成本计算、继承规则、最佳时机、转职后调整</title>
+      <link>https://dynew.gamewayz.com/guides/guide-class-change/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-class-change/</guid>
+      <description>渡鸦2轉職系統完整分析：哪些東西會繼承、轉職成本vs創新角色、最佳轉職時機、轉職後的屬性與裝備調整攻略。</description>
     </item>
     <item>
       <title>渡鸦2各等级段升级路线：1-70级最快升级攻略</title>
@@ -357,6 +385,13 @@
       <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
       <guid>https://dynew.gamewayz.com/guides/guide-gem-socket/</guid>
       <description>全宝石属性介绍、各职业最佳镶嵌方案、宝石合成概率、省钱合成技巧。</description>
+    </item>
+    <item>
+      <title>混沌之塔各层通关攻略：12-15层详细机制、职业配置、推荐战力</title>
+      <link>https://dynew.gamewayz.com/guides/guide-chaos-tower/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-chaos-tower/</guid>
+      <description>混沌之塔1-15層完整攻略：每層Boss機制、推薦戰力、職業站位要點，重點解析最難的12-15層通關技巧。</description>
     </item>
     <item>
       <title>渡鸦2圣衣系统详解：圣衣获取、升级、变身技能全攻略</title>
@@ -394,6 +429,13 @@
       <description>装备制作完整攻略：制作材料来源、图纸获取途径、个人制作与公会制作区别。省钱做装备。</description>
     </item>
     <item>
+      <title>古代城塞大型攻略：24人公會PVE競標機制、Boss機制與獎勵最大化</title>
+      <link>https://dynew.gamewayz.com/guides/guide-ancient-citadel/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-ancient-citadel/</guid>
+      <description>古代城塞完整攻略：競標流程、戰場策略、Boss機制詳解、獎勵分配、職業分工——公會長必讀。</description>
+    </item>
+    <item>
       <title>渡鸦2离线挂机机制详解：离线收益最大化设置</title>
       <link>https://dynew.gamewayz.com/guides/guide-offline/</link>
       <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
@@ -415,6 +457,13 @@
       <description>钻石变现完整攻略：交易渠道、当前比例、安全防骗。RMB玩家和搬砖党都必看。</description>
     </item>
     <item>
+      <title>ZERO伺服器完全攻略：1.5周年新服特色、刷寶水晶、F2P生存指南</title>
+      <link>https://dynew.gamewayz.com/guides/guide-zero-server/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-zero-server/</guid>
+      <description>ZERO伺服器全面解析：降低成長負擔、無PK環境、刷寶水晶系統詳解、職業推薦、課金與無課體驗對比。</description>
+    </item>
+    <item>
       <title>渡鸦2公会副本攻略：副本机制、队伍配置、奖励详解</title>
       <link>https://dynew.gamewayz.com/guides/guide-guild-dungeon/</link>
       <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
@@ -429,11 +478,25 @@
       <description>斯特拉（特斯拉）系统完整攻略：召唤概率、合成规则、技能选择、各职业推荐搭配。被动提升关键。</description>
     </item>
     <item>
+      <title>渡鸦2新纪元炼金系统全攻略：配方、材料与收益最大化</title>
+      <link>https://dynew.gamewayz.com/guides/guide-alchemy/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-alchemy/</guid>
+      <description>2026版炼金系统详解：配方大全、材料刷取路线、积分商店兑换优先级、效率最大化技巧。</description>
+    </item>
+    <item>
       <title>渡鸦2使魔远征队系统详解：派遣策略、奖励表、效率最大化</title>
       <link>https://dynew.gamewayz.com/guides/guide-familiar-expedition/</link>
       <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
       <guid>https://dynew.gamewayz.com/guides/guide-familiar-expedition/</guid>
       <description>2026年2月新增使魔远征队系统全攻略：解锁条件、队伍搭配、奖励一览、派遣技巧。让闲置使魔为你打工。</description>
+    </item>
+    <item>
+      <title>渡鸦2新纪元混合术成长系统完整攻略</title>
+      <link>https://dynew.gamewayz.com/guides/guide-hybrid-growth/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-hybrid-growth/</guid>
+      <description>2026年全新混合术系统详解：机制、材料获取、职业优先级、F2P与氪金养成路线对比。</description>
     </item>
     <item>
       <title>渡鸦2个人交易系统完全指南：安全交易、可交易物品、手续费详解</title>
@@ -443,11 +506,32 @@
       <description>2026年新增个人交易系统攻略：如何安全交易、可交易物品清单、费率说明、避坑指南。免拍卖行手续费。</description>
     </item>
     <item>
+      <title>渡鸦2新纪元金技制作书与技能书市场全解析</title>
+      <link>https://dynew.gamewayz.com/guides/guide-skill-book-market/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-skill-book-market/</guid>
+      <description>技能书市场深度分析：金技制作书价格走势、自制vs拍卖决策、材料刷取路线、最佳投资技能推荐。</description>
+    </item>
+    <item>
+      <title>神射手职业攻略：技能加点、天星之石、PVE/PVP装备全解析</title>
+      <link>https://dynew.gamewayz.com/guides/guide-gunslinger/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-gunslinger/</guid>
+      <description>渡鸦2新职业神射手（Gunslinger）完整攻略：技能加点推荐、天星之石搭配、装备优先级、走位技巧，值得转职吗？</description>
+    </item>
+    <item>
       <title>渡鸦2斯特拉转换系统攻略：同阶转色、材料消耗、优先级推荐</title>
       <link>https://dynew.gamewayz.com/guides/guide-stella-convert/</link>
       <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
       <guid>https://dynew.gamewayz.com/guides/guide-stella-convert/</guid>
       <description>2026年新版斯特拉转换系统详解：如何将不需要的斯特拉转换成想要的属性/颜色，成本计算，最佳转换策略。</description>
+    </item>
+    <item>
+      <title>渡鸦2新纪元争夺战GvG大型攻略：2026版必读</title>
+      <link>https://dynew.gamewayz.com/guides/guide-gvg/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-gvg/</guid>
+      <description>2026年争夺战全面改版详解：赛制机制、职业分工、攻防时机、奖励优化、指挥技巧全涵盖。</description>
     </item>
     <item>
       <title>渡鸦2行刺者攻略：技能加点、天星技能选择、PVE/PVP装备搭配</title>
@@ -457,6 +541,13 @@
       <description>行刺者（刺客）职业完整攻略：技能分析推荐、天星技能选择、双套装搭配、连招手法。近战爆发天花板。</description>
     </item>
     <item>
+      <title>渡鸦2新纪元无课微课全职业养成路线图</title>
+      <link>https://dynew.gamewayz.com/guides/guide-f2p-roadmap/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-f2p-roadmap/</guid>
+      <description>零氪/小氪玩家6个月完整养成规划：资源分配优先级、每日流程、职业选择建议、战力提升时间表。</description>
+    </item>
+    <item>
       <title>渡鸦2服务器迁移攻略：转服条件、费用、步骤、选服建议</title>
       <link>https://dynew.gamewayz.com/guides/guide-server-transfer/</link>
       <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
@@ -464,11 +555,25 @@
       <description>服务器迁移（移民）完整指南：为什么转服、转服条件要求、费用明细、迁移步骤、最佳目标服推荐。平稳转服不掉队。</description>
     </item>
     <item>
+      <title>渡鸦2新纪元狩猎场效率排名与挂机点推荐2026版</title>
+      <link>https://dynew.gamewayz.com/guides/guide-hunting-areas/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-hunting-areas/</guid>
+      <description>2026实测数据：各等级最优挂机点、经验金币效率排行、稀有掉落表、战力门槛建议。</description>
+    </item>
+    <item>
       <title>渡鸦2圣衣使魔抽卡保底机制详解：概率、保底数、继承规则、抽卡策略</title>
       <link>https://dynew.gamewayz.com/guides/guide-pity-system/</link>
       <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
       <guid>https://dynew.gamewayz.com/guides/guide-pity-system/</guid>
       <description>圣衣和使魔召唤保底系统全解析：各品质概率表、保底触发条件、跨卡池继承规则、零氪和氪佬抽卡策略。不浪费每一抽。</description>
+    </item>
+    <item>
+      <title>渡鸦2新纪元PC版模拟器设定与画面优化指南</title>
+      <link>https://dynew.gamewayz.com/guides/guide-pc-settings/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-pc-settings/</guid>
+      <description>最佳模拟器推荐、各硬件配置优化方案、FPS提升技巧、闪退卡顿黑屏修复、多开设置教程。</description>
     </item>
     <item>
       <title>渡鸦2竞技场PVP进阶上分攻略：段位系统、职业强度排行、连招克制</title>

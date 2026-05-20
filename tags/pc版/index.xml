@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PC版 on 渡鸦2攻略站</title>
+    <link>https://dynew.gamewayz.com/tags/pc%E7%89%88/</link>
+    <description>Recent content in PC版 on 渡鸦2攻略站</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dynew.gamewayz.com/tags/pc%E7%89%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>渡鸦2新纪元PC版模拟器设定与画面优化指南</title>
+      <link>https://dynew.gamewayz.com/guides/guide-pc-settings/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-pc-settings/</guid>
+      <description>最佳模拟器推荐、各硬件配置优化方案、FPS提升技巧、闪退卡顿黑屏修复、多开设置教程。</description>
+    </item>
+  </channel>
+</rss>

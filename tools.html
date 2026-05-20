@@ -123,6 +123,63 @@
         </div>
       </div>
 
+      <!-- Tool 3: Heavenstone Recommender -->
+      <div class="tool-card">
+        <div class="tool-card-header">
+          <h2>&#x1F48E; 天堂之石搭配推荐器</h2>
+          <p>选择职业和玩法，智能推荐最佳天堂之石搭配</p>
+        </div>
+        <div class="tool-card-body">
+          <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:16px;">
+            支持所有8大职业、PVE/PVP双模式，按攻击/防御/辅助分类推荐。S/A/B评级一目了然。
+          </p>
+          <a href="tools/heavenstone.html" class="tool-btn tool-btn-primary">&#x1F50D; 开始搭配</a>
+        </div>
+      </div>
+
+      <!-- Tool 4: Enhancement Simulator -->
+      <div class="tool-card">
+        <div class="tool-card-header">
+          <h2>&#x1F528; 装备强化模拟器</h2>
+          <p>模拟装备强化概率，计算强化成本和成功率</p>
+        </div>
+        <div class="tool-card-body">
+          <div class="calc-grid">
+            <div class="calc-field">
+              <label>当前强化等级</label>
+              <input type="number" id="enhanceFrom" value="0" min="0" max="20" />
+            </div>
+            <div class="calc-field">
+              <label>目标强化等级</label>
+              <input type="number" id="enhanceTo" value="5" min="1" max="21" />
+            </div>
+            <div class="calc-field">
+              <label>装备品级</label>
+              <select id="enhanceTier">
+                <option value="1.0">普通</option>
+                <option value="0.85" selected>稀有</option>
+                <option value="0.7">英雄</option>
+                <option value="0.5">传说</option>
+              </select>
+            </div>
+            <div class="calc-field">
+              <label>是否使用保护卷</label>
+              <select id="useScroll">
+                <option value="no">不使用</option>
+                <option value="yes">使用（+10以上）</option>
+              </select>
+            </div>
+          </div>
+          <div class="calc-result" id="enhanceResult">
+            <div class="row"><span>总成功概率</span><span id="enhanceProb">0%</span></div>
+            <div class="row"><span>平均消耗强化石</span><span id="enhanceStones">0</span></div>
+            <div class="row total"><span>预估花费（金币）</span><span id="enhanceCost">0</span></div>
+          </div>
+          <button class="tool-btn tool-btn-primary" onclick="calcEnhance()">&#x1F504; 重新计算</button>
+          <p class="note">&#x26A0; 基于游戏内基础概率估算，实际强化有随机波动。保护卷只在+10以上生效。</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -226,6 +283,58 @@ document.addEventListener('DOMContentLoaded', () => {
       calcProfit();
     });
   });
+});
+
+// ==================== ENHANCEMENT SIMULATOR ====================
+const ENHANCE_BASE_RATES = {
+  0: 1.0, 1: 0.85, 2: 0.7, 3: 0.55, 4: 0.4,
+  5: 0.3, 6: 0.25, 7: 0.18, 8: 0.12, 9: 0.08,
+  10: 0.05, 11: 0.04, 12: 0.03, 13: 0.025, 14: 0.02,
+  15: 0.015, 16: 0.01, 17: 0.008, 18: 0.005, 19: 0.003, 20: 0.002
+};
+const STONE_COST = 500;
+const PROTECT_SCROLL_COST = 50000;
+
+function calcEnhance() {
+  const from = parseInt(document.getElementById('enhanceFrom').value) || 0;
+  const to = parseInt(document.getElementById('enhanceTo').value) || 1;
+  const tier = parseFloat(document.getElementById('enhanceTier').value);
+  const useScroll = document.getElementById('useScroll').value;
+
+  if (to <= from) {
+    document.getElementById('enhanceProb').textContent = '目标需大于当前';
+    document.getElementById('enhanceStones').textContent = '-';
+    document.getElementById('enhanceCost').textContent = '-';
+    return;
+  }
+
+  let totalProb = 1;
+  let totalStones = 0;
+  let totalCost = 0;
+
+  for (let i = from; i < to && i < 21; i++) {
+    const baseRate = ENHANCE_BASE_RATES[i] || 0;
+    const actualRate = baseRate * tier;
+    totalProb *= actualRate;
+    const attempts = Math.ceil(1 / actualRate);
+    totalStones += attempts;
+    totalCost += attempts * STONE_COST;
+    if (i >= 10 && useScroll === 'yes') {
+      totalCost += attempts * PROTECT_SCROLL_COST;
+    }
+  }
+
+  document.getElementById('enhanceProb').textContent = (totalProb * 100).toFixed(2) + '%';
+  document.getElementById('enhanceStones').textContent = totalStones.toLocaleString() + ' 个';
+  document.getElementById('enhanceCost').textContent = totalCost.toLocaleString() + ' 金';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  ['enhanceFrom','enhanceTo','enhanceTier','useScroll'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('change', calcEnhance);
+  });
+  calcEnhance();
 });
 </script>
 </body>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渡鸦2天堂之石搭配推荐器</title>
+  <meta name="description" content="选择职业和玩法偏好，智能推荐最佳天堂之石搭配方案">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .hs-layout { display: grid; grid-template-columns: 360px 1fr; gap: 24px; align-items: start; }
+    @media (max-width: 900px) { .hs-layout { grid-template-columns: 1fr; } }
+
+    /* Selection Panel */
+    .hs-panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+    .hs-panel h2 { font-size: 1.05rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .hs-panel .field { margin-bottom: 16px; }
+    .hs-panel .field label { display: block; font-size: 0.8rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 6px; }
+    .hs-panel select { width: 100%; padding: 10px 12px; background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 0.9rem; }
+    .hs-panel select:focus { outline: none; border-color: var(--accent-red); }
+    .hs-panel .search-input { width: 100%; padding: 10px 12px; background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 0.9rem; }
+    .hs-panel .search-input:focus { outline: none; border-color: var(--accent-red); }
+    .hs-panel .search-input::placeholder { color: var(--text-muted); }
+
+    .toggle-group { display: flex; gap: 0; border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; }
+    .toggle-btn { flex: 1; padding: 10px; text-align: center; cursor: pointer; font-size: 0.85rem; font-weight: 600; background: var(--bg-primary); color: var(--text-secondary); border: none; transition: all var(--transition); }
+    .toggle-btn:not(:last-child) { border-right: 1px solid var(--border); }
+    .toggle-btn.active { background: var(--accent-red); color: #fff; }
+
+    .checkbox-group { display: flex; flex-direction: column; gap: 8px; }
+    .checkbox-group label { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; cursor: pointer; padding: 8px 12px; background: var(--bg-primary); border-radius: var(--radius-sm); transition: all var(--transition); }
+    .checkbox-group label:hover { background: var(--bg-hover); }
+    .checkbox-group input[type="checkbox"] { accent-color: var(--accent-red); width: 16px; height: 16px; cursor: pointer; }
+    .checkbox-group .slot-badge { font-size: 0.7rem; padding: 1px 8px; border-radius: 20px; font-weight: 600; margin-left: auto; }
+    .badge-atk { background: rgba(192, 57, 43, 0.2); color: var(--accent-red); }
+    .badge-def { background: rgba(52, 152, 219, 0.2); color: #3498db; }
+    .badge-sup { background: rgba(46, 204, 113, 0.2); color: #2ecc71; }
+
+    /* Results */
+    .hs-results-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+    .hs-results-header .count { font-size: 0.85rem; color: var(--text-secondary); }
+    .hs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+
+    .hs-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; transition: all var(--transition); }
+    .hs-card:hover { border-color: var(--accent-primary); transform: translateY(-2px); box-shadow: var(--shadow); }
+    .hs-card-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 10px; gap: 8px; }
+    .hs-card-header .name { font-size: 1.05rem; font-weight: 700; }
+    .hs-card-header .tier { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800; flex-shrink: 0; }
+    .tier-s { background: linear-gradient(135deg, #f1c40f, #e67e22); color: #1a1a1a; }
+    .tier-a { background: linear-gradient(135deg, #9b59b6, #8e44ad); color: #fff; }
+    .tier-b { background: var(--bg-hover); color: var(--text-secondary); }
+
+    .hs-card .type-badge { display: inline-block; font-size: 0.7rem; padding: 2px 10px; border-radius: 20px; font-weight: 600; margin-bottom: 8px; }
+    .hs-card .stats { display: flex; flex-direction: column; gap: 4px; margin-bottom: 8px; }
+    .hs-card .stats .stat { font-size: 0.85rem; color: var(--text-secondary); }
+    .hs-card .stats .stat strong { color: var(--accent-primary); }
+    .hs-card .obtain { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; }
+    .hs-card .reason { font-size: 0.8rem; color: var(--accent-primary); border-top: 1px solid var(--border); padding-top: 8px; }
+
+    .hs-empty { text-align: center; padding: 60px 20px; color: var(--text-muted); }
+    .hs-empty .icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .hs-empty p { font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="../index.html" class="logo">&#x1F987; <span>渡鸦2</span> 攻略站</a>
+    <nav class="nav" id="nav">
+      <a href="../index.html">首页</a> <a href="../guides.html">攻略</a> <a href="../classes.html">职业</a>
+      <a href="../tools.html" class="active">工具</a> <a href="../codes.html">礼包码</a> <a href="../database.html">资料库</a>
+      <a href="../news.html">资讯</a> <a href="../about.html">关于</a>
+    </nav>
+    <a href="../search/" style="color:var(--text-secondary);font-size:1.1rem;padding:6px 10px;border-radius:6px;transition:all 0.2s;text-decoration:none;flex-shrink:0;" title="搜索攻略">&#x1F50D;</a>
+    <button class="hamburger" id="hamburger">&#x2630;</button>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../tools.html">工具</a> / 天堂之石搭配推荐器</div>
+    <h1>&#x1F48E; 渡鸦2天堂之石搭配推荐器</h1>
+    <p>选择职业和玩法偏好，智能推荐最佳天堂之石搭配方案</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="hs-layout">
+
+      <!-- Selection Panel -->
+      <div class="hs-panel">
+        <h2>&#x2699;&#xFE0F; 筛选条件</h2>
+
+        <div class="field">
+          <label>职业</label>
+          <select id="classSelect">
+            <option value="">全部职业</option>
+            <option value="berserker">狂战士</option>
+            <option value="nightwalker">夜行者</option>
+            <option value="holy-mage">神圣法师</option>
+            <option value="vanguard">先锋</option>
+            <option value="elementalist">元素使</option>
+            <option value="destroyer">毁灭者</option>
+            <option value="assassin">行刺者</option>
+            <option value="oracle">神谕师</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>玩法偏好</label>
+          <div class="toggle-group" id="playstyleToggle">
+            <button class="toggle-btn active" data-value="pve">PVE</button>
+            <button class="toggle-btn" data-value="pvp">PVP</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>槽位类型</label>
+          <div class="checkbox-group" id="slotGroup">
+            <label><input type="checkbox" value="attack" checked> 攻击石 <span class="slot-badge badge-atk">攻击</span></label>
+            <label><input type="checkbox" value="defense" checked> 防御石 <span class="slot-badge badge-def">防御</span></label>
+            <label><input type="checkbox" value="support" checked> 辅助石 <span class="slot-badge badge-sup">辅助</span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>搜索</label>
+          <input type="text" class="search-input" id="searchInput" placeholder="搜索天堂之石名称或属性...">
+        </div>
+      </div>
+
+      <!-- Results Panel -->
+      <div>
+        <div class="hs-results-header">
+          <div class="count" id="resultCount">共 0 个推荐结果</div>
+        </div>
+        <div class="hs-grid" id="resultGrid"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 渡鸦2攻略站 &mdash; 玩家共建攻略社区 | <a href="../privacy.html">隐私政策</a></p>
+    <p>游戏版权 &copy; Netmarble Corporation</p>
+  </div>
+</footer>
+<button class="back-top" id="backTop">&#x2191;</button>
+
+<script>
+// ==================== DATASET ====================
+const STONES = [
+  {
+    id: 'flame',
+    name: '烈焰之石',
+    type: 'attack',
+    stats: '攻击力 +3.5%',
+    obtain: '火焰之地副本 (深渊第2层) / 世界Boss掉落',
+    tier: 'S',
+    reason: { berserker: '狂战士核心输出石，直接提升爆发伤害', destroyer: '毁灭者必备，最大化平A和技能伤害', elementalist: '元素使火系精通的最佳搭配', assassin: '提升刺杀爆发伤害', nightwalker: '补充夜行者单体输出', default: '通用攻击石，适合所有输出职业' },
+    classes: ['berserker','nightwalker','holy-mage','vanguard','elementalist','destroyer','assassin','oracle'],
+    pve: 95, pvp: 75
+  },
+  {
+    id: 'frost',
+    name: '冰霜之石',
+    type: 'attack',
+    stats: '暴击率 +2.8%',
+    obtain: '冰封峡谷 (精英怪掉落) / 公会商店兑换',
+    tier: 'S',
+    reason: { berserker: '暴击率对狂战士的狂暴触发至关重要', nightwalker: '夜行者依赖暴击触发暗影印记', assassin: '行刺者暴击流核心', elementalist: '配合冰系法术提高暴击覆盖', default: '提升暴击率，万金油输出石' },
+    classes: ['berserker','nightwalker','elementalist','destroyer','assassin'],
+    pve: 90, pvp: 80
+  },
+  {
+    id: 'thunder',
+    name: '雷霆之石',
+    type: 'attack',
+    stats: '暴击伤害 +5.2%',
+    obtain: '雷神遗迹 (隐藏Boss) / 竞技场兑换',
+    tier: 'A',
+    reason: { berserker: '配合高暴击率打出恐怖爆发', assassin: '刺杀流暴伤乘区核心', elementalist: '爆发型法师的暴伤放大器', nightwalker: '暗影暴击后的伤害倍增器', default: '暴击伤害提升，适合高暴击流派' },
+    classes: ['berserker','nightwalker','elementalist','assassin'],
+    pve: 85, pvp: 70
+  },
+  {
+    id: 'shadow',
+    name: '暗影之石',
+    type: 'attack',
+    stats: '穿透 +4.1%',
+    obtain: '暗影神殿 (征服模式) / 暗影宝箱',
+    tier: 'S',
+    reason: { assassin: '行刺者穿透流必备，无视护甲打后排', nightwalker: '夜行者穿透叠加暗影伤害', destroyer: '毁灭者穿透提升真实伤害占比', berserker: '面对高甲Boss时穿透至关重要', default: '穿透属性在高难副本中收益极高' },
+    classes: ['berserker','nightwalker','destroyer','assassin','elementalist'],
+    pve: 92, pvp: 88
+  },
+  {
+    id: 'dawn',
+    name: '破晓之石',
+    type: 'attack',
+    stats: '攻击力 +2.5%, 命中 +1.5%',
+    obtain: '晨曦祭坛 (每日副本) / 制作合成',
+    tier: 'A',
+    reason: { vanguard: '先锋兼顾输出与命中的均衡选择', holy_mage: '神圣法师需要命中保证控制技能', berserker: '弥补狂战士命中不足的缺陷', oracle: '神谕师的辅助攻击石选择', default: '双属性石，性价比高' },
+    classes: ['berserker','holy-mage','vanguard','elementalist','destroyer','assassin','oracle'],
+    pve: 80, pvp: 85
+  },
+  {
+    id: 'fury',
+    name: '狂怒之石',
+    type: 'attack',
+    stats: '攻击速度 +3.0%',
+    obtain: '血之试炼 (活动副本) / 荣誉商店',
+    tier: 'A',
+    reason: { berserker: '攻速直接提升狂战士怒气积攒速度', assassin: '行刺者攻速流核心，快速触发连击', nightwalker: '夜行者攻速提升暗影连击频率', destroyer: '毁灭者攻速加快技能循环', default: '提升攻击频率，适合平A流派' },
+    classes: ['berserker','nightwalker','destroyer','assassin'],
+    pve: 82, pvp: 78
+  },
+  {
+    id: 'guardian',
+    name: '守护之石',
+    type: 'defense',
+    stats: '防御力 +3.2%',
+    obtain: '钢铁堡垒 (精英副本) / 防御型宝箱',
+    tier: 'S',
+    reason: { vanguard: '先锋核心防御石，极大提升坦度', berserker: '狂战士半肉流必备', holy_mage: '神圣法师生存能力提升', oracle: '神谕师保命石首选', default: '最通用的防御石，人人可用' },
+    classes: ['berserker','holy-mage','vanguard','destroyer','oracle'],
+    pve: 90, pvp: 92
+  },
+  {
+    id: 'life',
+    name: '生命之石',
+    type: 'defense',
+    stats: '最大生命 +4.5%',
+    obtain: '生命之泉 (世界Boss) / 签到奖励',
+    tier: 'S',
+    reason: { vanguard: '先锋血量上限坦度倍增', berserker: '狂战士血越多狂暴越久', destroyer: '毁灭者需要血量支撑持续作战', oracle: '神谕师提升生存为团队续航', default: '百分比血量提升，生存首选' },
+    classes: ['berserker','holy-mage','vanguard','destroyer','assassin','oracle'],
+    pve: 88, pvp: 90
+  },
+  {
+    id: 'tenacity',
+    name: '坚韧之石',
+    type: 'defense',
+    stats: '韧性 +3.8%',
+    obtain: '试炼之塔 (第10层奖励) / PVP商店',
+    tier: 'A',
+    reason: { vanguard: '先锋PVP冲阵必备，减少控制时间', berserker: 'PVP防止被风筝到死', destroyer: '毁灭者PVP韧性抵消爆发', assassin: '行刺者PVP防反杀', default: 'PVP关键属性，减少被控时间' },
+    classes: ['berserker','vanguard','destroyer','assassin','nightwalker'],
+    pve: 60, pvp: 95
+  },
+  {
+    id: 'shadowscreen',
+    name: '影幕之石',
+    type: 'defense',
+    stats: '回避 +2.5%',
+    obtain: '暗影神殿 (隐藏房间) / 暗影商店',
+    tier: 'A',
+    reason: { nightwalker: '夜行者闪避流核心，配合暗影步', assassin: '行刺者回避增加生存和偷袭机会', oracle: '神谕师利用闪避弥补护甲不足', default: '闪避属性收益受职业基础影响' },
+    classes: ['nightwalker','assassin','oracle','elementalist'],
+    pve: 70, pvp: 85
+  },
+  {
+    id: 'ironwall',
+    name: '铁壁之石',
+    type: 'defense',
+    stats: '格挡 +3.0%',
+    obtain: '钢铁堡垒 (Boss掉落) / 铁匠制作',
+    tier: 'B',
+    reason: { vanguard: '先锋格挡减伤流的补充选择', berserker: '狂战士格挡流副坦玩法', destroyer: '毁灭者格挡提升生存能力', default: '格挡触发减伤，适合前排职业' },
+    classes: ['berserker','vanguard','destroyer'],
+    pve: 65, pvp: 70
+  },
+  {
+    id: 'healing',
+    name: '治愈之石',
+    type: 'support',
+    stats: '治疗量 +4.0%',
+    obtain: '生命之泉 (隐藏Boss) / 公会捐献',
+    tier: 'S',
+    reason: { holy_mage: '神圣法师核心治疗石，团队续航保障', oracle: '神谕师治疗量放大器', default: '提升治疗效果，辅助职业首选' },
+    classes: ['holy-mage','oracle'],
+    pve: 95, pvp: 80
+  },
+  {
+    id: 'wind',
+    name: '疾风之石',
+    type: 'support',
+    stats: '移动速度 +2.5%',
+    obtain: '风之谷 (每日任务) / 竞技场荣誉',
+    tier: 'B',
+    reason: { nightwalker: '夜行者机动性进一步提升，PVP追击利器', assassin: '行刺者绕后和拉扯的移速补充', oracle: '神谕师需要移速调整站位', default: '移速在PVP中价值高于PVE' },
+    classes: ['berserker','nightwalker','holy-mage','vanguard','elementalist','destroyer','assassin','oracle'],
+    pve: 50, pvp: 80
+  },
+  {
+    id: 'wisdom',
+    name: '智慧之石',
+    type: 'support',
+    stats: '冷却缩减 +3.5%',
+    obtain: '智慧殿堂 (知识副本) / 学者商店',
+    tier: 'S',
+    reason: { holy_mage: '神圣法师技能CD缩短，奶量和控制更频繁', elementalist: '元素使技能循环更快，爆发窗口缩短', oracle: '神谕师护盾和治疗更频繁', berserker: '狂战士技能CD减少提升怒气效率', default: '冷却缩减是最高贵的属性之一' },
+    classes: ['berserker','holy-mage','vanguard','elementalist','destroyer','assassin','oracle'],
+    pve: 92, pvp: 88
+  },
+  {
+    id: 'insight',
+    name: '洞察之石',
+    type: 'support',
+    stats: '暴击抵抗 +2.8%',
+    obtain: '试炼之塔 (第20层奖励) / PVP荣誉兑换',
+    tier: 'A',
+    reason: { vanguard: '先锋PVP抗暴击坦度核心', oracle: '神谕师预判减暴击保护团队', berserker: '狂战士内战抗暴击优势', destroyer: '毁灭者PVP对抗暴击流', default: 'PVP对抗暴击流派的关键属性' },
+    classes: ['berserker','holy-mage','vanguard','destroyer','oracle'],
+    pve: 55, pvp: 92
+  },
+  {
+    id: 'blessing',
+    name: '祝福之石',
+    type: 'support',
+    stats: '全部属性 +1.5%',
+    obtain: '祝福之地 (周常副本) / 限时活动',
+    tier: 'S',
+    reason: { oracle: '神谕师全属性提升收益最大', holy_mage: '神圣法师全面提升奶量和生存', berserker: '狂战士全属性均衡提升', vanguard: '先锋全属性坦度和反伤增强', default: '全属性提升，万能型天堂之石' },
+    classes: ['berserker','nightwalker','holy-mage','vanguard','elementalist','destroyer','assassin','oracle'],
+    pve: 85, pvp: 85
+  },
+  {
+    id: 'abyss',
+    name: '深渊之石',
+    type: 'attack',
+    stats: '暗属性攻击 +4.0%',
+    obtain: '深渊副本 (第5层) / 深渊宝箱',
+    tier: 'A',
+    reason: { nightwalker: '夜行者暗属性伤害完美匹配', assassin: '行刺者暗属性刺杀流选择', destroyer: '毁灭者暗属性AOE伤害提升', oracle: '神谕师暗属性附加伤害', default: '暗属性攻击石，特定职业收益高' },
+    classes: ['nightwalker','destroyer','assassin','oracle'],
+    pve: 85, pvp: 75
+  }
+];
+
+// ==================== HELPERS ====================
+const CLASS_KEYS = {
+  'berserker': 'berserker',
+  'nightwalker': 'nightwalker',
+  'holy-mage': 'holy_mage',
+  'vanguard': 'vanguard',
+  'elementalist': 'elementalist',
+  'destroyer': 'destroyer',
+  'assassin': 'assassin',
+  'oracle': 'oracle'
+};
+
+const CLASS_NAMES = {
+  'berserker': '狂战士',
+  'nightwalker': '夜行者',
+  'holy-mage': '神圣法师',
+  'vanguard': '先锋',
+  'elementalist': '元素使',
+  'destroyer': '毁灭者',
+  'assassin': '行刺者',
+  'oracle': '神谕师'
+};
+
+const TYPE_LABELS = { attack: '攻击石', defense: '防御石', support: '辅助石' };
+const TYPE_BADGE_CLASS = { attack: 'badge-atk', defense: 'badge-def', support: 'badge-sup' };
+const TIER_CLASS = { S: 'tier-s', A: 'tier-a', B: 'tier-b' };
+
+function getScore(stone, classKey, playstyle) {
+  if (!classKey) return stone.pve;
+  return playstyle === 'pvp' ? stone.pvp : stone.pve;
+}
+
+function getReason(stone, classKey) {
+  const ck = CLASS_KEYS[classKey] || 'default';
+  return stone.reason[ck] || stone.reason['default'] || '通用推荐';
+}
+
+// ==================== RENDER ====================
+function render() {
+  const classVal = document.getElementById('classSelect').value;
+  const playstyle = document.querySelector('#playstyleToggle .toggle-btn.active').getAttribute('data-value');
+  const checkedSlots = Array.from(document.querySelectorAll('#slotGroup input[type="checkbox"]:checked')).map(cb => cb.value);
+  const query = document.getElementById('searchInput').value.trim().toLowerCase();
+
+  let filtered = STONES.slice();
+
+  // Filter by slot type
+  if (checkedSlots.length > 0) {
+    filtered = filtered.filter(s => checkedSlots.includes(s.type));
+  }
+
+  // Filter by search
+  if (query) {
+    filtered = filtered.filter(s => s.name.includes(query) || s.stats.toLowerCase().includes(query) || s.type.includes(query));
+  }
+
+  // Sort by tier priority
+  const tierOrder = { S: 0, A: 1, B: 2 };
+  filtered.sort((a, b) => {
+    const aScore = getScore(a, classVal, playstyle);
+    const bScore = getScore(b, classVal, playstyle);
+    if (aScore !== bScore) return bScore - aScore;
+    return tierOrder[a.tier] - tierOrder[b.tier];
+  });
+
+  const grid = document.getElementById('resultGrid');
+  const count = document.getElementById('resultCount');
+  count.textContent = `共 ${filtered.length} 个推荐结果`;
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="hs-empty"><div class="icon">&#x1F50D;</div><p>没有找到匹配的天堂之石，请调整筛选条件</p></div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(s => {
+    const score = getScore(s, classVal, playstyle);
+    const reasonText = classVal ? getReason(s, classVal) : '适用于所有职业的' + TYPE_LABELS[s.type];
+    const tierDot = s.tier;
+
+    return `<div class="hs-card">
+      <div class="hs-card-header">
+        <div>
+          <div class="name">${s.name}</div>
+          <span class="type-badge ${TYPE_BADGE_CLASS[s.type]}">${TYPE_LABELS[s.type]}</span>
+        </div>
+        <div class="tier ${TIER_CLASS[s.tier]}">${s.tier}</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>${s.stats}</strong></div>
+        <div class="stat">适配评分: ${score}<span style="color:var(--text-muted);font-size:0.75rem">/100</span></div>
+      </div>
+      <div class="obtain">&#x1F4E6; ${s.obtain}</div>
+      <div class="reason">&#x1F4A1; ${reasonText}</div>
+    </div>`;
+  }).join('');
+}
+
+// ==================== EVENTS ====================
+// Class select
+document.getElementById('classSelect').addEventListener('change', render);
+
+// Playstyle toggle
+document.querySelectorAll('#playstyleToggle .toggle-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('#playstyleToggle .toggle-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    render();
+  });
+});
+
+// Slot type checkboxes
+document.querySelectorAll('#slotGroup input[type="checkbox"]').forEach(cb => {
+  cb.addEventListener('change', render);
+});
+
+// Search
+document.getElementById('searchInput').addEventListener('input', render);
+
+// ==================== HAMBURGER ====================
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('nav').classList.toggle('open');
+});
+
+// ==================== BACK TO TOP ====================
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 300) {
+    backTop.classList.add('show');
+  } else {
+    backTop.classList.remove('show');
+  }
+});
+backTop.addEventListener('click', function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ==================== INIT ====================
+render();
+</script>
+</body>
+</html>
