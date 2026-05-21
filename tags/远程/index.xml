@@ -6,7 +6,7 @@
     <description>Recent content in 远程 on 渡鸦2攻略站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dynew.gamewayz.com/tags/%E8%BF%9C%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>神射手职业攻略：技能加点、天星之石、PVE/PVP装备全解析</title>
@@ -14,6 +14,13 @@
       <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
       <guid>https://dynew.gamewayz.com/guides/guide-gunslinger/</guid>
       <description>渡鸦2新职业神射手（Gunslinger）完整攻略：技能加点推荐、天星之石搭配、装备优先级、走位技巧，值得转职吗？</description>
+    </item>
+    <item>
+      <title>突击者终极配装攻略：远程物理爆发天花板</title>
+      <link>https://dynew.gamewayz.com/guides/guide-commando-build/</link>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://dynew.gamewayz.com/guides/guide-commando-build/</guid>
+      <description>突击者远程物理输出配装、天星之石与武器协同、PVP风筝战术、宝石搭配与属性阈值。版本最强物理远程玩法。</description>
     </item>
   </channel>
 </rss>

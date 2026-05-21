@@ -287,6 +287,26 @@ tr:hover { background: var(--bg-hover); }
 .back-top.show { display: flex; }
 .back-top:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(192, 57, 43, 0.5); }
 
+/* Related Guides */
+.related-divider { margin: 48px 0 32px; border: none; border-top: 1px solid var(--border); }
+.related-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; color: var(--text-primary); }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.related-card {
+  display: block; background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px; text-decoration: none;
+  transition: all var(--transition);
+}
+.related-card:hover { border-color: var(--accent-primary); transform: translateY(-2px); box-shadow: var(--shadow); }
+.related-card-body { display: flex; flex-direction: column; gap: 6px; }
+.related-tag {
+  display: inline-block; padding: 2px 10px; border-radius: 20px;
+  font-size: 0.75rem; font-weight: 600; background: rgba(192,57,43,0.2); color: var(--accent-primary);
+  width: fit-content;
+}
+.related-card h3 { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin: 0; line-height: 1.4; }
+.related-card:hover h3 { color: var(--accent-primary); }
+.related-card p { font-size: 0.82rem; color: var(--text-secondary); margin: 0; line-height: 1.4; }
+
 /* Responsive */
 @media (max-width: 768px) {
   .hamburger { display: block; }
