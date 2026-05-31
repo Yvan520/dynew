@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     };
     guideSearch.addEventListener('input', searchGuides);
-    // URL query parameter
     const params = new URLSearchParams(window.location.search);
     const q = params.get('q');
     if (q) {
@@ -120,4 +119,21 @@ document.addEventListener('DOMContentLoaded', () => {
       a.classList.add('active');
     }
   });
+
+  // Scroll reveal animation
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  if (revealEls.length && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  }
 });
